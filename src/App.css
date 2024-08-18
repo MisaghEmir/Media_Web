@@ -1,38 +1,190 @@
-.App {
-  text-align: center;
+.open {
+  mix-blend-mode: difference;
+  color: aliceblue;
+  animation: open-div .4s forwards;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@keyframes open-div {
+  0% {
+    width: 100vw;
+    clip-path: circle(0% at 0 0);
+  }
+  5% {
+    width: 100vw;
+    clip-path: circle(7.07% at 0 0);
+  }
+  10% {
+    width: 100vw;
+    clip-path: circle(14.14% at 0 0);
+  }
+  15% {
+    width: 100vw;
+    clip-path: circle(21.21% at 0 0);
+  }
+  20% {
+    width: 100vw;
+    clip-path: circle(28.28% at 0 0);
+  }
+  25% {
+    width: 100vw;
+    clip-path: circle(35.35% at 0 0);
+  }
+  30% {
+    width: 100vw;
+    clip-path: circle(42.42% at 0 0);
+  }
+  35% {
+    width: 100vw;
+    clip-path: circle(49.49% at 0 0);
+  }
+  40% {
+    width: 100vw;
+    clip-path: circle(56.56% at 0 0);
+  }
+  45% {
+    width: 100vw;
+    clip-path: circle(63.63% at 0 0);
+  }
+  50% {
+    width: 100vw;
+    clip-path: circle(70.7% at 0 0);
+  }
+  55% {
+    width: 100vw;
+    clip-path: circle(77.77% at 0 0);
+  }
+  60% {
+    width: 100vw;
+    clip-path: circle(84.84% at 0 0);
+  }
+  65% {
+    width: 100vw;
+    clip-path: circle(91.91% at 0 0);
+  }
+  70% {
+    width: 100vw;
+    clip-path: circle(98.98% at 0 0);
+  }
+  75% {
+    width: 100vw;
+    clip-path: circle(106.5% at 0 0);
+  }
+  80% {
+    width: 100vw;
+    clip-path: circle(113.12% at 0 0);
+  }
+  85% {
+    width: 100vw;
+    clip-path: circle(120.19% at 0 0);
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  90% {
+    width: 100vw;
+    clip-path: circle(127.26% at 0 0);
+  }
+  95% {
+    width: 100vw;
+    clip-path: circle(134.33% at 0 0);
+  }
+
+  100% {
+    width: 100vw;
+    clip-path: circle(141.4% at 0 0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.close {
+  mix-blend-mode: difference;
+  color: aliceblue;
+  animation: close-div .3s forwards;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes close-div {
+  0% {
+    width: 100vw;
+    clip-path: circle(141.4% at 0 0);
   }
-  to {
-    transform: rotate(360deg);
+  5% {
+    width: 100vw;
+    clip-path: circle(134.33% at 0 0);
+  }
+  10% {
+    width: 100vw;
+    clip-path: circle(127.26% at 0 0);
+  }
+  15% {
+    width: 100vw;
+    clip-path: circle(120.19% at 0 0);
+  }
+  20% {
+    width: 100vw;
+    clip-path: circle(113.12% at 0 0);
+  }
+  25% {
+    width: 100vw;
+    clip-path: circle(106.5% at 0 0);
+  }
+  30% {
+    width: 100vw;
+    clip-path: circle(98.98% at 0 0);
+  }
+  35% {
+    width: 100vw;
+    clip-path: circle(91.91% at 0 0);
+  }
+  40% {
+    width: 100vw;
+    clip-path: circle(84.84% at 0 0);
+  }
+  45% {
+    width: 100vw;
+    clip-path: circle(77.77% at 0 0);
+  }
+
+  50% {
+    width: 100vw;
+    clip-path: circle(70.7% at 0 0);
+  }
+
+  55% {
+    width: 100vw;
+    clip-path: circle(63.63% at 0 0);
+  }
+
+  60% {
+    width: 100vw;
+    clip-path: circle(56.56% at 0 0);
+  }
+  65% {
+    width: 100vw;
+    clip-path: circle(49.49% at 0 0);
+  }
+  70% {
+    width: 100vw;
+    clip-path: circle(42.42% at 0 0);
+  }
+  75% {
+    width: 100vw;
+    clip-path: circle(35.35% at 0 0);
+  }
+  80% {
+    width: 100vw;
+    clip-path: circle(28.28% at 0 0);
+  }
+  85% {
+    width: 100vw;
+    clip-path: circle(21.21% at 0 0);
+  }
+  90% {
+    width: 100vw;
+    clip-path: circle(14.14% at 0 0);
+  }
+  95% {
+    width: 100vw;
+    clip-path: circle(7.07% at 0 0);
+  }
+  100% {
+    width: 100vw;
+    clip-path: circle(0% at 0 0);
   }
 }

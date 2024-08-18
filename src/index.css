@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+
 @font-face {
   font-family: "Acumin Pro";
   font-style: normal;
@@ -42,7 +45,7 @@ body{
   font-family: "Acumin Pro";
 }
 
-div[theme-mode="light"] {
+:root {
   /* Background ---------------- */
   /* --------------------------- */
 

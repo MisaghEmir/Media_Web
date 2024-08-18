@@ -1,9 +1,9 @@
 import React from 'react'
 
-function test() {
+function TestCom({open}) {
   return (
-    <div>test</div>
+    <div className={`absolute h-[100vh] top-0 left-0 bg-slate-800 z-[-1] ${open}`}></div>
   )
 }
 
-export default test
+export default TestCom

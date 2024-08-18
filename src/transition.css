@@ -1,0 +1,25 @@
+
+
+div[data-mode="light"] {
+    /* Background ---------------- */
+    /* --------------------------- */
+  
+    --transition-11: .8s;
+    --transition-410: .4s;
+
+}
+div[data-mode="dark"] {
+    /* Background ---------------- */
+    /* --------------------------- */
+  
+    --transition-11: .5s;
+    --transition-410: 1.0s;
+
+}
+
+.text11{
+    transition: var(--transition-11) color;
+}
+.text410{
+    transition: var(--transition-410) color;
+}
