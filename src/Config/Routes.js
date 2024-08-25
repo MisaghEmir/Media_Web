@@ -7,6 +7,7 @@ import TestCom from '../Pages/test'
 
 const Home = lazy(() => import("../Pages/Home"));
 const Login = lazy(() => import("../Pages/Login"));
+const Football = lazy(() => import("../Pages/Football/Football"));
 
 
 export const routerHeaderMatch = [
@@ -17,6 +18,10 @@ export const routerHeaderMatch = [
     {
       element: "",
       path: "/login",
+    },
+    {
+      element: <HeaderMatch />,
+      path: "/football",
     },
 ]
 
@@ -30,6 +35,10 @@ export const routerHeader = [
       element: "",
       path: "/login",
     },
+    {
+      element: <Header />,
+      path: "/football",
+    },
 ]
 
 
@@ -42,6 +51,10 @@ export const routerMain = [
       element: <Login />,
       path: "/login",
     },
+    {
+      element: <Football />,
+      path: "/football",
+    },
 ]
 
 export const routerFooter = [
@@ -52,6 +65,10 @@ export const routerFooter = [
     {
         element: <Footer />,
       path: "/login",
+    },
+    {
+      element: <Footer />,
+      path: "/football",
     },
 ]
 

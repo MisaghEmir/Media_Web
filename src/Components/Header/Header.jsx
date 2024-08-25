@@ -35,7 +35,9 @@ function Header() {
             Explore
           </li>
           <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">
+            <Link to={'/football'}>
             Football
+            </Link>
           </li>
           <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">NFL</li>
           <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">NBA</li>
