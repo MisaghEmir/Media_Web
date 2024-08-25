@@ -43,7 +43,7 @@ function Header() {
           </li>
           <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">NFL</li>
           <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">NBA</li>
-          <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">Judo</li>
+          <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">Matches</li>
         </ul>
       </div>
       <div className=" flex-1 flex items-center  ">
