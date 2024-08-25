@@ -7,6 +7,8 @@ import RowNews from "../Components/News/RowNews";
 function Home() {
   return (
     <div className="mt-32 overflow-x-hidden">
+      {/* // HEAD ------------------------------------------
+      //--------------------------------------------------- */}
       <div className=" relative flex ">
         <div className="  w-40 pt-16">
           <div className=" relative">
@@ -70,6 +72,8 @@ function Home() {
           </div>
         </div>
       </div>
+      {/* // MAIN ------------------------------------------
+      //--------------------------------------------------- */}
       <div className="md:px-16 mt-20">
         <div className="grid grid-cols-12">
           <div className="col-span-12 md:col-span-8 ">
@@ -106,8 +110,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-12">
-          </div>
+        <div className="grid grid-cols-12"></div>
       </div>
     </div>
   );

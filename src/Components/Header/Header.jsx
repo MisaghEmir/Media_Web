@@ -29,7 +29,9 @@ function Header() {
           style={{ fontSize: "15px", fontWeight: "500", border: "0" }}
         >
           <li className="pt-4 m-0 font-AcuminProBold font-bold cursor-pointer pb-3">
+          <Link to={'/'}>
             VC
+            </Link>
           </li>
           <li className="pt-4 m-0 hidden md:block cursor-pointer  pb-3">
             Explore

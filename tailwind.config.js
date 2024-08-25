@@ -60,13 +60,28 @@ module.exports = {
         color_border_80: withOpacity("--color-border-80"),
         color_border_90: withOpacity("--color-border-90"),
         color_border_100: withOpacity("--color-border-100"),
+
+
+
+        theme_border_100: withOpacity(" --theme-border-100"),
+        theme_border_200: withOpacity(" --theme-border-200"),
+        theme_border_300: withOpacity(" --theme-border-300"),
+        theme_border_400: withOpacity(" --theme-border-400"),
+        theme_border_500: withOpacity(" --theme-border-500"),
+        theme_border_600: withOpacity(" --theme-border-600"),
+        theme_border_700: withOpacity(" --theme-border-700"),
+        theme_border_800: withOpacity(" --theme-border-800"),
+        theme_border_900: withOpacity(" --theme-border-900"),
       },
       backgroundColor: {
         background_body: withOpacity("--background-body"),
         background_body_dark: withOpacity("--background-bodyDark"),
 
 
-
+      
+        color_bg_00: withOpacity("--color-text-00"),
+        color_bg_10: withOpacity("--color-text-10"),
+        color_bg_11: withOpacity("--color-text-11"),
         color_bg_12: withOpacity("--color-text-12"),
         color_bg_13: withOpacity("--color-text-13"),
         color_bg_14: withOpacity("--color-text-14"),
