@@ -107,9 +107,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.footballnav.active{
-  background-color: rgb(255, 0, 0);
-}
+
 
 :root {
   /* Background ---------------- */
@@ -215,4 +213,8 @@ div[data-theme="blue"] {
   --theme-border-700: rgba(80, 144, 240, 0.111);
   --theme-border-800: rgb(245,248,255);
   --theme-border-900: rgb(245,248,255);
+}
+
+.footballnav.active{
+  border-color: var(--theme-border-200);
 }

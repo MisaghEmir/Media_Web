@@ -1,22 +1,21 @@
 import { Popover, PopoverButton, PopoverPanel } from '@headlessui/react'
-import { IoIosArrowDown } from "react-icons/io";
 
-export default function ExampleSmall() {
+export default function ExampleSmall({title, classTitle, classMenu}) {
   return (
     <div className="flex w-full justify-center">
       <div className="flex ">
         <Popover>
-          <PopoverButton className="block font-semibold text-white focus:outline-none data-[active]:text-white data-[hover]:text-white data-[focus]:outline-1 data-[focus]:outline-white">
-            <IoIosArrowDown />
+          <PopoverButton className={`block font-semibold  focus:outline-none  data-[focus]:outline-1 data-[focus]:outline-white ${classTitle}`}>
+            {title}
           </PopoverButton>
           <PopoverPanel
             transition
             anchor="bottom"
-            className="divide-y divide-white/5 rounded-xl bg-color_bg_16 mt-3 text-sm/6 transition duration-200 ease-in-out [--anchor-gap:var(--spacing-5)] data-[closed]:-translate-y-1 data-[closed]:opacity-0"
+            className={`divide-y divide-white/5 rounded-xl  mt-3 text-sm/6 transition duration-200 ease-in-out [--anchor-gap:var(--spacing-5)] data-[closed]:-translate-y-1 data-[closed]:opacity-0 ${classMenu}`}
           >
             <div className="p-3">
               <a className="block rounded-lg py-2 px-3 transition hover:bg-white/5" href="#">
-                <p className="font-semibold text-white">Insights</p>
+                <p className={`font-semibold ${classMenu}`}>Insights</p>
                 <p className="text-white/50">Measure actions your users take</p>
               </a>
               <a className="block rounded-lg py-2 px-3 transition hover:bg-white/5" href="#">

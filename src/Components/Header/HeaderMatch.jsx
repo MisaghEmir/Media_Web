@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { gsap } from "gsap";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { IoIosArrowBack,IoIosArrowForward  } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
 
 // Import Swiper styles
@@ -11,15 +12,26 @@ import "swiper/css/scrollbar";
 import Example from "../Elements/Example";
 
 function HeaderMatch() {
+  useEffect(() => {
+    gsap.to(".header", 0.0, { y: -60,opacity: 0 });
+   
+
+    setTimeout(() => {
+      gsap.to(".header", 0.4, { y: 0,opacity: 1 });
+    }, 200);
+  }, []);
   const swiper = useSwiper();
   return (
-    <header className="flex  border-blue-100 py-1 pr-20 bg-color_bg_29">
+    <header className="flex  border-blue-100 header py-1 pr-20 bg-color_bg_29 z-40">
       <div className="flex items-center px-4 py-2">
         <Example />
       </div>
       <div className="flex items-center">
-        <button className=" bg-theme_200 text-color_text_30 px-[3px] py-3 rounded-s-lg" onClick={() => swiper.slideNext()}>
-         <IoIosArrowBack />
+        <button
+          className=" bg-theme_200 text-color_text_30 px-[3px] py-3 rounded-s-lg"
+          onClick={() => swiper.slideNext()}
+        >
+          <IoIosArrowBack />
         </button>
       </div>
       <Swiper
@@ -147,8 +159,11 @@ function HeaderMatch() {
         <SwiperSlide>Slide 4</SwiperSlide>
       </Swiper>
       <div className="flex items-center">
-        <button className=" bg-theme_200 text-color_text_30 px-[3px] py-3 rounded-e-lg" onClick={() => swiper.slideNext()}>
-         <IoIosArrowForward  />
+        <button
+          className=" bg-theme_200 text-color_text_30 px-[3px] py-3 rounded-e-lg"
+          onClick={() => swiper.slideNext()}
+        >
+          <IoIosArrowForward />
         </button>
       </div>
     </header>

@@ -96,7 +96,9 @@
 .close {
   mix-blend-mode: difference;
   color: aliceblue;
-  animation: close-div .3s forwards;
+  opacity: 0;
+  transition: all 1s;
+  /* animation: close-div .3s forwards; */
 }
 
 @keyframes close-div {
@@ -187,4 +189,15 @@
     width: 100vw;
     clip-path: circle(0% at 0 0);
   }
+}
+
+.notscroll::-webkit-scrollbar {
+  width: 0px;
+}
+
+.notscroll::-webkit-scrollbar-thumb {
+  background-color: rgb(207, 207, 207);
+  border-radius: 100px;
+  height: 50%;
+  width: 0;
 }

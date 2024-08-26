@@ -1,6 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ExampleSmall from "../Elements/ExampleSmall";
+import { IoIosArrowDown } from "react-icons/io";
+
 
 function Navigation() {
   return (
@@ -19,24 +21,24 @@ function Navigation() {
       </div>
       <div className="flex justify-between px-32 pr-24 pt-3">
         <div className="flex  sticky top-0 gap-8 font-SourceSansProBold">
-          <Link
-            href="/football"
+          <NavLink
+            to="/football"
             className="border-theme_border_100 border-b-4 border-transparent px-2 pb-1 footballnav"
           >
             All
-          </Link>
-          <Link
-            href="./"
+          </NavLink>
+          <NavLink
+            to="./Champions"
             className="hover:border-theme_border_100 border-b-4 border-transparent px-2 pb-1 footballnav"
           >
             UEFA Champions League
-          </Link>
-          <Link
-            href="./"
+          </NavLink>
+          <NavLink
+            to="./Laliga"
             className="hover:border-theme_border_100 border-b-4 border-transparent px-2 pb-1 footballnav"
           >
             Laliga
-          </Link>
+          </NavLink>
           <Link
             href="./"
             className="hover:border-theme_border_100 border-b-4 border-transparent px-2 pb-1"
@@ -63,7 +65,7 @@ function Navigation() {
           </Link>
         </div>
         <div className="hover:border-theme_border_100 border-b-4 border-transparent px-2 pt-2 pb-1">
-          <ExampleSmall />
+          <ExampleSmall title={<IoIosArrowDown />} classMenu={'bg-color_bg_16 text-white'} />
         </div>
       </div>
     </div>

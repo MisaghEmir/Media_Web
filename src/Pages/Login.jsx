@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaFacebook, FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import Toggle from "../Components/Elements/Toggle";
@@ -7,6 +7,19 @@ import { Link } from "react-router-dom";
 
 function Login() {
   const [emailCheck, setEmailCheck] = useState(false);
+
+  useEffect(() => {
+    gsap.to(".email", 0.0, { opacity: 0 });
+    gsap.to(".email", 0.4, { x: 60 });
+    gsap.to(".logo", 0.0, { opacity: 0 });
+    gsap.to(".logo", 0.4, { y: 60 });
+
+    setTimeout(() => {
+      gsap.to(".email", 0.4, { x: 0, opacity: 1 });
+      gsap.to(".logo", 0.4, { y: 0, opacity: 1 });
+    }, 200);
+  }, []);
+
   const clickHandle = (submit) => {
     switch (submit) {
       case "general":
@@ -42,7 +55,7 @@ function Login() {
       <div className="z-[0] flex justify-between fixed w-full h-full overflow-hidden">
         <div className="flex-1 flex items-center justify-center">
           <Link to="/">
-            <h1 className="  text-color_text_27 mr-52 mt-24 text-4xl flex font-bold items-center font-SourceSansPro ">
+            <h1 className=" logo text-color_text_27 mr-52 mt-24 text-4xl flex font-bold items-center font-SourceSansPro ">
               <span className="p-[2px] mr-3 bg-black px-2  rounded-lg text-2xl">
                 VC
               </span>
