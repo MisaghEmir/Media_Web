@@ -9,6 +9,7 @@ import {
 import { themeModeContext, useThemeMode } from "./Context/themeContext";
 import TestCom from "./Pages/test";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HeaderMatch from "./Components/Header/HeaderMatch";
 
 function App() {
   const [theme, themeMode] = useThemeMode();
@@ -20,16 +21,21 @@ function App() {
           data-mode={theme ? "dark" : "light"}
           data-theme="blue"
         >
-            <Routes>
-              {routerHeaderMatch.map((route, index) => (
-                <Route path={route.path} element={route.element} key={index} />
-              ))}
-            </Routes>
-            <Routes>
-              {routerHeader.map((route, index) => (
-                <Route path={route.path} element={route.element} key={index} />
-              ))}
-            </Routes>
+          <Routes>
+              <Route
+                path={'/'}
+                element={<HeaderMatch open={theme ? "openHeaderMatch" : "close"} />}
+              />
+              <Route
+                path={'/football'}
+                element={<HeaderMatch open={theme ? "openHeaderMatch" : "close"} />}
+              />
+          </Routes>
+          <Routes>
+            {routerHeader.map((route, index) => (
+              <Route path={route.path} element={route.element} key={index} />
+            ))}
+          </Routes>
           <main className="pb-20 overflow-hidden">
             <Suspense fallback={"<Loading />"}>
               <Routes>

@@ -11,20 +11,6 @@ const Explore = lazy(() => import("../Pages/Explore/Explore"));
 const Football = lazy(() => import("../Pages/Football/Football"));
 
 
-export const routerHeaderMatch = [
-    {
-      element: <HeaderMatch />,
-      path: "/",
-    },
-    {
-      element: "",
-      path: "/login",
-    },
-    {
-      element: <HeaderMatch />,
-      path: "/football",
-    },
-]
 
 
 export const routerHeader = [

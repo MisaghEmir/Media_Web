@@ -127,7 +127,7 @@ function Home() {
                 <Label title={"Football"} rounded={false} />
               </div>
               <SmNews />
-              <div className="mt-20">
+              <div className="mt-20" >
                 <RowNews />
                 <RowNews />
               </div>

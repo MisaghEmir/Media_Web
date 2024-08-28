@@ -20,7 +20,7 @@ export default function Example() {
         <ListboxButton
           className={clsx(
             'bg-pink-600 items-center relative block w-full rounded-lg bg-white/5 py-1.5 pr-8 pl-3 text-left text-sm/6 text-black',
-            'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 data-[focus]:outline-white/25 items-center'
+            'focus:outline-none data-[focus]:outline-2 data-[focus]:-outline-offset-2 dark:text-white data-[focus]:outline-white/25 items-center'
           )}
         >
           {selected.name}

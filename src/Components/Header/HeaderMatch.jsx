@@ -10,9 +10,8 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Example from "../Elements/Example";
-import { useThemeMode } from "../../Context/themeContext";
 
-function HeaderMatch() {
+function HeaderMatch({open}) {
   useEffect(() => {
     gsap.to(".header", 0.0, { y: -60,opacity: 0 });
    
@@ -23,7 +22,7 @@ function HeaderMatch() {
   }, []);
   const swiper = useSwiper();
 
-  const [theme, themeMode] = useThemeMode();
+  console.log(open)
   return (
     <header className="flex  border-blue-100 header py-1 pr-20 bg-color_bg_29 z-40 relative">
       <div className="flex items-center px-4 py-2">
@@ -47,7 +46,7 @@ function HeaderMatch() {
         className="border-r border-l border-color_border_40"
       >
         <SwiperSlide>
-          <div className="">
+          <div className="dark:text-white">
             <div></div>
             <div className="flex">
               <div className="flex-col w-40 px-3">
@@ -169,7 +168,7 @@ function HeaderMatch() {
           <IoIosArrowForward />
         </button>
       </div>
-      <div className={`right-0 absolute top-0 h-full w-full dark:.dark z-[-1] ${theme ? "open" : "close"}`}>
+      <div className={`left-0 absolute top-0 h-full z-[-1] bg-background_body_dark ${open}`}>
 
       </div>
     </header>

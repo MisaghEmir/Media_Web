@@ -159,16 +159,16 @@ function ExploreSwiper() {
           ))}
         </div>
       </div>
-      <div className="w-32 absolute left-0 cursor-pointer top-0 flex items-center h-full z-10 bg-gradient-to-l from-transparent to-white">
-        <span className="text-2xl font-bold ml-5 text-black bg-white rounded-full p-2 shadow-2xl shadow-black" onClick={prevSlide}>
+      <div className="w-32 absolute left-0 cursor-pointer top-0 flex items-center h-full z-10 bg-gradient-to-l from-transparent to-white dark:to-black">
+        <span className="text-2xl font-bold ml-5 text-black bg-white dark:text-white dark:bg-black rounded-full p-2 shadow-2xl shadow-black" onClick={prevSlide}>
           <IoIosArrowBack />
         </span>
       </div>
-      <div className="w-40 absolute right-0 cursor-pointer top-0 flex items-center justify-end bg-gradient-to-r from-transparent to-white h-full z-10">
-        <span className="text-2xl font-bold text- mr-3 opacity-100 bg-white rounded-full p-2 shadow-2xl shadow-black" onClick={nextSlide}>
+      <div className="w-40 absolute right-0 cursor-pointer top-0 flex items-center justify-end bg-gradient-to-r from-transparent to-white dark:to-black h-full z-10">
+        <span className="text-2xl font-bold text- mr-3 opacity-100 bg-white dark:text-white dark:bg-black rounded-full p-2 shadow-2xl shadow-black" onClick={nextSlide}>
           <IoIosArrowForward />
         </span>
-        <span className="text-3xl delay-75 transition-all hover:bg-theme_200 hover:text-white font-bold text-black mr-5 opacity-100 bg-white rounded-md p-2 shadow-2xl shadow-black" onClick={nextSlide}>
+        <span className="text-3xl delay-75 transition-all hover:bg-theme_200 hover:text-white dark:text-white dark:bg-black font-bold text-black mr-5 opacity-100 bg-white rounded-md p-2 shadow-2xl shadow-black" onClick={nextSlide}>
           <IoIosMore />
         </span>
       </div>
