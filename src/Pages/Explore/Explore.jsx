@@ -19,7 +19,7 @@ function Explore() {
       <ExploreSwiper />
         {/* // HEAD ------------------------------------------
       //--------------------------------------------------- */}
-      <div className="flex-1 flex flex-col head items-center px-20  pb-72">
+      <div className="flex-1 flex flex-col head items-center px-20  pb-7 mt-16">
         <div className=" text-5xl">
           <h1
             className="text11 text-color_text_11 m-0 dark:text-color_text_29 text-center text-[70px] font-AcuminProBold"
