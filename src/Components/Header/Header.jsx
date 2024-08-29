@@ -3,7 +3,7 @@ import { IoIosNotifications } from "react-icons/io";
 import { MdDarkMode } from "react-icons/md";
 import { useContext } from "react";
 import { themeModeContext } from "../../Context/themeContext";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { gsap } from "gsap";
 import ExampleSmall from "../Elements/ExampleSmall";
@@ -72,9 +72,10 @@ function Header() {
         >
           <li
             className=" m-0 text-xl cursor-pointer border rounded-full p-1 border-color_border_20 dark:border-color_border_50"
-            onClick={themeMode.toggleLoginMode}
           >
-            <CiSearch />
+            <NavLink to={"/search"}>
+              <CiSearch />
+            </NavLink>
           </li>
           <li
             className="pt-0 m-0 text-xl cursor-pointer"
@@ -83,9 +84,7 @@ function Header() {
             <MdDarkMode />
           </li>
           <li className="pt-0 m-0 text-xl cursor-pointer">
-         
             <IoIosNotifications />
-        
           </li>
           <li className="pt-0 m-0">
             <Link to={"/login"}>
