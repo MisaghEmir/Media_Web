@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IoIosNotifications } from "react-icons/io";
-import { MdDarkMode } from "react-icons/md";
+import { MdDarkMode, MdEmail } from "react-icons/md";
 import { useContext } from "react";
 import { themeModeContext } from "../../Context/themeContext";
 import { Link, NavLink } from "react-router-dom";
@@ -141,48 +141,93 @@ function Right() {
 
 function Login() {
   const [notif, setNotif] = useState(false);
-  const themeMode = useContext(themeModeContext);
   return (
-    <ul
-      className="flex justify-start content-center  items-center p-0 m-0 gap-3 h-full text-sm"
-      style={{ fontSize: "15px", fontWeight: "500" }}
-    >
-      <li className=" m-0 text-xl cursor-pointer border rounded-full p-1 border-color_border_20 dark:border-color_border_50">
-        <NavLink to={"/search"}>
-          <CiSearch />
-        </NavLink>
-      </li>
-      <li className="pt-0 m-0">
-        <Link to={"/login"}>
-          <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 px-5 py-1 pt-2">
-            Share Your Work
-          </button>
-        </Link>
-      </li>
-      <li
+    <div>
+      <ul
+        className="flex justify-start content-center  items-center p-0 m-0 gap-3 h-full text-sm"
+        style={{ fontSize: "15px", fontWeight: "500" }}
+      >
+        <li className=" m-0 text-xl cursor-pointer border rounded-full p-1 border-color_border_20 dark:border-color_border_50">
+          <NavLink to={"/search"}>
+            <CiSearch />
+          </NavLink>
+        </li>
+        <li className="pt-0 m-0">
+          <Link to={"/login"}>
+            <button className="w-36 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 px-2 py-1 pt-2">
+              Share Your Work
+            </button>
+          </Link>
+        </li>
+        {/* <li
         className="pt-0 m-0 text-xl cursor-pointer"
         onClick={themeMode.toggleLoginMode}
       >
         <MdDarkMode />
-      </li>
-      <li
-        className=" m-0 text-xl cursor-pointer relative notif h-full py-[16px] pt-[17px]"
-        onMouseEnter={() => setNotif(true)}
-        onMouseLeave={() => setNotif(false)}
-      >
-        <span>
-          <IoIosNotifications />
-        </span>
-        <div
+      </li> */}
+        <li
+          className=" m-0 text-xl cursor-pointer relative notif h-full py-[16px] pt-[17px]"
           onMouseEnter={() => setNotif(true)}
           onMouseLeave={() => setNotif(false)}
-          className="notifDiv max-h-[80vh] overflow-y-auto bg-background_body shadow-xl transition-all delay-150 z-30 mt-[17px] right-0 translate-x-48 rounded-lg"
-          tabIndex={1}
         >
-          <NotifBox />
-        </div>
-      </li>
-    </ul>
+          <span>
+            <MdEmail />
+          </span>
+          <div
+            onMouseEnter={() => setNotif(true)}
+            onMouseLeave={() => setNotif(false)}
+            className="notifDiv max-h-[80vh] overflow-y-auto bg-background_body shadow-xl transition-all delay-150 z-30 mt-[17px] right-0 translate-x-20 rounded-lg"
+            tabIndex={1}
+          >
+            <NotifBox />
+          </div>
+        </li>
+        <li
+          className=" m-0 text-xl cursor-pointer relative notif h-full py-[16px] pt-[17px]"
+          onMouseEnter={() => setNotif(true)}
+          onMouseLeave={() => setNotif(false)}
+        >
+          <span>
+            <IoIosNotifications />
+          </span>
+          <div
+            onMouseEnter={() => setNotif(true)}
+            onMouseLeave={() => setNotif(false)}
+            className="notifDiv max-h-[80vh] overflow-y-auto bg-background_body shadow-xl transition-all delay-150 z-30 mt-[17px] right-0 translate-x-20 rounded-lg"
+            tabIndex={1}
+          >
+            <NotifBox />
+          </div>
+        </li>
+        <li
+          className=" m-0 text-xl cursor-pointer relative notif h-full py-[10px] pt-[8px]"
+          onMouseEnter={() => setNotif(true)}
+          onMouseLeave={() => setNotif(false)}
+        >
+          <span>
+            <img src="./image/tools/zoom-230.png" className="w-7 h-7" alt="" />
+          </span>
+          <div
+            onMouseEnter={() => setNotif(true)}
+            onMouseLeave={() => setNotif(false)}
+            className="notifDiv max-h-[80vh] overflow-y-auto bg-background_body shadow-xl transition-all delay-150 z-30 mt-[17px] right-0 translate-x-0 rounded-lg"
+            tabIndex={1}
+          >
+            <NotifBox />
+          </div>
+        </li>
+        <li className=" m-0 text-xl cursor-pointer relative notif h-full py-[0px] pt-[0px]">
+          <span>
+            <img src="./image/logo/logo.jpg" className="w-11 h-11 bg-transparent" alt="" />
+          </span>
+        </li>
+      </ul>
+      <div
+        className={`fixed ${
+          notif ? "opacity-100" : " opacity-0 hidden"
+        } top-0  left-0 w-[98.6vw] transition-all delay-150 z-[-1] h-screen bg-gradient-to-b from-black/10 via-black/5 to-black/5 `}
+      ></div>
+    </div>
   );
 }
 
