@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy,useMemo } from "react";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer";
 import HeaderMatch from "../Components/Header/HeaderMatch";
@@ -16,7 +16,7 @@ const Football = lazy(() => import("../Pages/Football/Football"));
 
 export const routerHeader = [
     {
-      element: <Header />,
+      element: <Header login={true} />,
       path: "/",
     },
     {

@@ -8,7 +8,7 @@ import { CiSearch } from "react-icons/ci";
 import { gsap } from "gsap";
 import NotifBox from "./NotifBox";
 
-function Header() {
+function Header({ login }) {
   const [sticky, setSticky] = useState(false);
   const [notif, setNotif] = useState(false);
   const themeMode = useContext(themeModeContext);
@@ -36,7 +36,7 @@ function Header() {
       }`}
     >
       <div className="p-0 pr-4 flex items-center h-full">
-      <Left />
+        <Left />
       </div>
       <div className=" flex-1 flex items-center  ">
         <ul
@@ -48,10 +48,7 @@ function Header() {
           </li>
         </ul>
       </div>
-      <div className=" flex items-center">
-       <Right />
-      </div>
-     
+      <div className=" flex items-center">{login ? <Login /> : <Right />}</div>
     </nav>
   );
 }
@@ -88,53 +85,52 @@ function Right() {
   const themeMode = useContext(themeModeContext);
   return (
     <div>
-
-    <ul
-      className="flex justify-start content-center  items-center p-0 m-0 gap-3 h-full text-sm"
-      style={{ fontSize: "15px", fontWeight: "500" }}
-    >
-      <li className=" m-0 text-xl cursor-pointer border rounded-full p-1 border-color_border_20 dark:border-color_border_50">
-        <NavLink to={"/search"}>
-          <CiSearch />
-        </NavLink>
-      </li>
-      <li
-        className="pt-0 m-0 text-xl cursor-pointer"
-        onClick={themeMode.toggleLoginMode}
+      <ul
+        className="flex justify-start content-center  items-center p-0 m-0 gap-3 h-full text-sm"
+        style={{ fontSize: "15px", fontWeight: "500" }}
       >
-        <MdDarkMode />
-      </li>
-      <li
-        className=" m-0 text-xl cursor-pointer relative notif h-full py-[16px] pt-[17px]"
-        onMouseEnter={() => setNotif(true)}
-        onMouseLeave={() => setNotif(false)}
-      >
-        <span>
-          <IoIosNotifications />
-        </span>
-        <div
+        <li className=" m-0 text-xl cursor-pointer border rounded-full p-1 border-color_border_20 dark:border-color_border_50">
+          <NavLink to={"/search"}>
+            <CiSearch />
+          </NavLink>
+        </li>
+        <li
+          className="pt-0 m-0 text-xl cursor-pointer"
+          onClick={themeMode.toggleLoginMode}
+        >
+          <MdDarkMode />
+        </li>
+        <li
+          className=" m-0 text-xl cursor-pointer relative notif h-full py-[16px] pt-[17px]"
           onMouseEnter={() => setNotif(true)}
           onMouseLeave={() => setNotif(false)}
-          className="notifDiv max-h-[80vh] overflow-y-auto bg-background_body shadow-xl transition-all delay-150 z-30 mt-[17px] right-0 translate-x-48 rounded-lg"
-          tabIndex={1}
         >
-          <NotifBox />
-        </div>
-      </li>
-      <li className="pt-0 m-0">
-        <Link to={"/login"}>
-          <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 px-5 py-1 pt-2">
-            Log in
+          <span>
+            <IoIosNotifications />
+          </span>
+          <div
+            onMouseEnter={() => setNotif(true)}
+            onMouseLeave={() => setNotif(false)}
+            className="notifDiv max-h-[80vh] overflow-y-auto bg-background_body shadow-xl transition-all delay-150 z-30 mt-[17px] right-0 translate-x-48 rounded-lg"
+            tabIndex={1}
+          >
+            <NotifBox />
+          </div>
+        </li>
+        <li className="pt-0 m-0">
+          <Link to={"/login"}>
+            <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 px-5 py-1 pt-2">
+              Log in
+            </button>
+          </Link>
+        </li>
+        <li className="pt-0 m-0">
+          <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 bg-theme_200 text-white px-5 py-1 pt-2">
+            Sign Up
           </button>
-        </Link>
-      </li>
-      <li className="pt-0 m-0">
-        <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 bg-theme_200 text-white px-5 py-1 pt-2">
-          Sign Up
-        </button>
-      </li>
-    </ul>
-    <div
+        </li>
+      </ul>
+      <div
         className={`fixed ${
           notif ? "opacity-100" : " opacity-0 hidden"
         } top-0  left-0 w-[98.6vw] transition-all delay-150 z-[-1] h-screen bg-gradient-to-b from-black/10 via-black/5 to-black/5 `}
@@ -156,6 +152,13 @@ function Login() {
           <CiSearch />
         </NavLink>
       </li>
+      <li className="pt-0 m-0">
+        <Link to={"/login"}>
+          <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 px-5 py-1 pt-2">
+            Share Your Work
+          </button>
+        </Link>
+      </li>
       <li
         className="pt-0 m-0 text-xl cursor-pointer"
         onClick={themeMode.toggleLoginMode}
@@ -178,18 +181,6 @@ function Login() {
         >
           <NotifBox />
         </div>
-      </li>
-      <li className="pt-0 m-0">
-        <Link to={"/login"}>
-          <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 px-5 py-1 pt-2">
-            Log in
-          </button>
-        </Link>
-      </li>
-      <li className="pt-0 m-0">
-        <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 bg-theme_200 text-white px-5 py-1 pt-2">
-          Sign Up
-        </button>
       </li>
     </ul>
   );
