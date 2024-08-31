@@ -6,7 +6,6 @@ import { themeModeContext } from "../../Context/themeContext";
 import { Link, NavLink } from "react-router-dom";
 import { CiSearch } from "react-icons/ci";
 import { gsap } from "gsap";
-import ExampleSmall from "../Elements/ExampleSmall";
 import NotifBox from "./NotifBox";
 
 function Header() {
@@ -37,25 +36,7 @@ function Header() {
       }`}
     >
       <div className="p-0 pr-4 flex items-center h-full">
-        <ul
-          className="flex justify-start content-center h-full items-center p-0 m-0 gap-5 text-sm"
-          style={{ fontSize: "15px", fontWeight: "500", border: "0" }}
-        >
-          <li className="pt-4 m-0 font-AcuminProBold font-bold cursor-pointer pb-3">
-            <Link to={"/"}>VC</Link>
-          </li>
-          <li className="pt-4 m-0 hidden md:block cursor-pointer  pb-3">
-            <Link to="/explore">Explore</Link>
-          </li>
-          <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">
-            <Link to={"/football"}>Football</Link>
-          </li>
-          <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">NFL</li>
-          <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3 ">NBA</li>
-          <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3 ">
-            Matches
-          </li>
-        </ul>
+      <Left />
       </div>
       <div className=" flex-1 flex items-center  ">
         <ul
@@ -68,47 +49,149 @@ function Header() {
         </ul>
       </div>
       <div className=" flex items-center">
-        <ul
-          className="flex justify-start content-center  items-center p-0 m-0 gap-3 h-full text-sm"
-          style={{ fontSize: "15px", fontWeight: "500" }}
-        >
-          <li className=" m-0 text-xl cursor-pointer border rounded-full p-1 border-color_border_20 dark:border-color_border_50">
-            <NavLink to={"/search"}>
-              <CiSearch />
-            </NavLink>
-          </li>
-          <li
-            className="pt-0 m-0 text-xl cursor-pointer"
-            onClick={themeMode.toggleLoginMode}
-          >
-            <MdDarkMode />
-          </li>
-          <li className=" m-0 text-xl cursor-pointer relative notif h-full py-[16px] pt-[17px]" onMouseEnter={() => setNotif(true)} onMouseLeave={() => setNotif(false)}>
-            <span>
-              <IoIosNotifications />
-            </span>
-            <div onMouseEnter={() => setNotif(true)} onMouseLeave={() => setNotif(false)}
-            className="notifDiv max-h-[80vh] overflow-y-auto bg-background_body shadow-xl transition-all delay-150 z-30 mt-[17px] right-0 translate-x-48 rounded-lg" tabIndex={1}>
-              <NotifBox />
-            </div>
-          </li>
-          <li className="pt-0 m-0">
-            <Link to={"/login"}>
-              <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 px-5 py-1 pt-2">
-                Log in
-              </button>
-            </Link>
-          </li>
-          <li className="pt-0 m-0">
-            <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 bg-theme_200 text-white px-5 py-1 pt-2">
-              Sign Up
-            </button>
-          </li>
-        </ul>
+       <Right />
       </div>
-      <div className={`fixed ${notif ? 'opacity-100' : ' opacity-0 hidden'} top-0  left-0 w-[98.6vw] transition-all delay-150 z-[-1] h-screen bg-gradient-to-b from-black/10 via-black/5 to-black/5 `}>
-      </div>
+     
     </nav>
+  );
+}
+
+function Left() {
+  const [notif, setNotif] = useState(false);
+  const themeMode = useContext(themeModeContext);
+  return (
+    <ul
+      className="flex justify-start content-center h-full items-center p-0 m-0 gap-5 text-sm"
+      style={{ fontSize: "15px", fontWeight: "500", border: "0" }}
+    >
+      <li className="pt-4 m-0 font-AcuminProBold font-bold cursor-pointer pb-3">
+        <Link to={"/"}>VC</Link>
+      </li>
+      <li className="pt-4 m-0 hidden md:block cursor-pointer h-full pb-3">
+        <Link to="/explore" className="anchor  h-full py-4">
+          Explore
+        </Link>
+        <div className="anchorDiv bg-background_body shadow-xl"></div>
+      </li>
+      <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">
+        <Link to={"/football"}>Football</Link>
+      </li>
+      <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3">NFL</li>
+      <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3 ">NBA</li>
+      <li className="pt-4 m-0 hidden md:block cursor-pointer pb-3 ">Matches</li>
+    </ul>
+  );
+}
+
+function Right() {
+  const [notif, setNotif] = useState(false);
+  const themeMode = useContext(themeModeContext);
+  return (
+    <div>
+
+    <ul
+      className="flex justify-start content-center  items-center p-0 m-0 gap-3 h-full text-sm"
+      style={{ fontSize: "15px", fontWeight: "500" }}
+    >
+      <li className=" m-0 text-xl cursor-pointer border rounded-full p-1 border-color_border_20 dark:border-color_border_50">
+        <NavLink to={"/search"}>
+          <CiSearch />
+        </NavLink>
+      </li>
+      <li
+        className="pt-0 m-0 text-xl cursor-pointer"
+        onClick={themeMode.toggleLoginMode}
+      >
+        <MdDarkMode />
+      </li>
+      <li
+        className=" m-0 text-xl cursor-pointer relative notif h-full py-[16px] pt-[17px]"
+        onMouseEnter={() => setNotif(true)}
+        onMouseLeave={() => setNotif(false)}
+      >
+        <span>
+          <IoIosNotifications />
+        </span>
+        <div
+          onMouseEnter={() => setNotif(true)}
+          onMouseLeave={() => setNotif(false)}
+          className="notifDiv max-h-[80vh] overflow-y-auto bg-background_body shadow-xl transition-all delay-150 z-30 mt-[17px] right-0 translate-x-48 rounded-lg"
+          tabIndex={1}
+        >
+          <NotifBox />
+        </div>
+      </li>
+      <li className="pt-0 m-0">
+        <Link to={"/login"}>
+          <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 px-5 py-1 pt-2">
+            Log in
+          </button>
+        </Link>
+      </li>
+      <li className="pt-0 m-0">
+        <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 bg-theme_200 text-white px-5 py-1 pt-2">
+          Sign Up
+        </button>
+      </li>
+    </ul>
+    <div
+        className={`fixed ${
+          notif ? "opacity-100" : " opacity-0 hidden"
+        } top-0  left-0 w-[98.6vw] transition-all delay-150 z-[-1] h-screen bg-gradient-to-b from-black/10 via-black/5 to-black/5 `}
+      ></div>
+    </div>
+  );
+}
+
+function Login() {
+  const [notif, setNotif] = useState(false);
+  const themeMode = useContext(themeModeContext);
+  return (
+    <ul
+      className="flex justify-start content-center  items-center p-0 m-0 gap-3 h-full text-sm"
+      style={{ fontSize: "15px", fontWeight: "500" }}
+    >
+      <li className=" m-0 text-xl cursor-pointer border rounded-full p-1 border-color_border_20 dark:border-color_border_50">
+        <NavLink to={"/search"}>
+          <CiSearch />
+        </NavLink>
+      </li>
+      <li
+        className="pt-0 m-0 text-xl cursor-pointer"
+        onClick={themeMode.toggleLoginMode}
+      >
+        <MdDarkMode />
+      </li>
+      <li
+        className=" m-0 text-xl cursor-pointer relative notif h-full py-[16px] pt-[17px]"
+        onMouseEnter={() => setNotif(true)}
+        onMouseLeave={() => setNotif(false)}
+      >
+        <span>
+          <IoIosNotifications />
+        </span>
+        <div
+          onMouseEnter={() => setNotif(true)}
+          onMouseLeave={() => setNotif(false)}
+          className="notifDiv max-h-[80vh] overflow-y-auto bg-background_body shadow-xl transition-all delay-150 z-30 mt-[17px] right-0 translate-x-48 rounded-lg"
+          tabIndex={1}
+        >
+          <NotifBox />
+        </div>
+      </li>
+      <li className="pt-0 m-0">
+        <Link to={"/login"}>
+          <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 px-5 py-1 pt-2">
+            Log in
+          </button>
+        </Link>
+      </li>
+      <li className="pt-0 m-0">
+        <button className="w-24 text-center dark:border-color_border_40 justify-center font-bold rounded-full hidden md:flex border text-[14px] border-color_border_70 bg-theme_200 text-white px-5 py-1 pt-2">
+          Sign Up
+        </button>
+      </li>
+    </ul>
   );
 }
 

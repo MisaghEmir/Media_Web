@@ -310,13 +310,37 @@
   transition: width 1s ease-in-out;
 
 }
+
+.anchor {
+ anchor-name: --myanchor;
+}
+
+.anchor:hover + .anchorDiv{
+  display: flex;
+}
+
+.anchorDiv:hover {
+  display: flex;
+}
+
+.anchorDiv{
+  position-anchor: --myanchor;
+  position: fixed;
+  display: none;
+  top: anchor(100%);
+  left: anchor(-100%);
+  width: 200px;
+  height: 400px;
+  transition: 1s all;
+}
+
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;
   border-radius: 50%;
   width: 48px;
   height: 48px;
-  color: #fff;
+  color: #000000;
 }
   .loader:before,
   .loader:after {
@@ -332,7 +356,7 @@
     animation: 1s spin linear infinite;
   }
   .loader:after {
-    color: #FF3D00;
+    color: rgb(0,46,216);
     transform: rotateY(70deg);
     animation-delay: .4s;
   }
