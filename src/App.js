@@ -10,6 +10,7 @@ import { themeModeContext, useThemeMode } from "./Context/themeContext";
 import TestCom from "./Pages/test";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import HeaderMatch from "./Components/Header/HeaderMatch";
+import FuncyLoading from "./Components/Elements/FuncyLoading";
 
 function App() {
   const [theme, themeMode] = useThemeMode();
@@ -22,15 +23,18 @@ function App() {
           data-theme="blue"
         >
           <Routes>
-              <Route
-                path={'/'}
-                element={<HeaderMatch open={theme ? "openHeaderMatch" : "close"} />}
-              />
-              <Route
-                path={'/football'}
-                element={<HeaderMatch open={theme ? "openHeaderMatch" : "close"} />}
-              />
-           
+            <Route
+              path={"/"}
+              element={
+                <HeaderMatch open={theme ? "openHeaderMatch" : "close"} />
+              }
+            />
+            <Route
+              path={"/football"}
+              element={
+                <HeaderMatch open={theme ? "openHeaderMatch" : "close"} />
+              }
+            />
           </Routes>
           <Routes>
             {routerHeader.map((route, index) => (
@@ -38,7 +42,7 @@ function App() {
             ))}
           </Routes>
           <main className="pb-20 overflow-hidden">
-            <Suspense fallback={"<Loading />"}>
+            <Suspense fallback={<FuncyLoading />}>
               <Routes>
                 {routerMain.map((route, index) => (
                   <Route

@@ -102,6 +102,32 @@ module.exports = {
         color_bg_29: withOpacity("--color-text-29"),
         color_bg_30: withOpacity("--color-text-30"),
 
+  // COVER --------------------------------------------------
+        // --------------------------------------------------------
+
+        color_cover_100: withOpacity("--color-cover-100"),
+        color_cover_200: withOpacity("--color-cover-200"),
+        color_cover_300: withOpacity("--color-cover-300"),
+        color_cover_400: withOpacity("--color-cover-400"),
+        color_cover_500: withOpacity("--color-cover-500"),
+        color_cover_600: withOpacity("--color-cover-600"),
+        color_cover_700: withOpacity("--color-cover-700"),
+        color_cover_800: withOpacity("--color-cover-800"),
+        color_cover_900: withOpacity("--color-cover-900"),
+
+         // BLACK --------------------------------------------------
+
+        color_coverblack_100: withOpacity("--color-coverblack-100"),
+        color_coverblack_200: withOpacity("--color-coverblack-200"),
+        color_coverblack_300: withOpacity("--color-coverblack-300"),
+        color_coverblack_400: withOpacity("--color-coverblack-400"),
+        color_coverblack_500: withOpacity("--color-coverblack-500"),
+        color_coverblack_600: withOpacity("--color-coverblack-600"),
+        color_coverblack_700: withOpacity("--color-coverblack-700"),
+        color_coverblack_800: withOpacity("--color-coverblack-800"),
+        color_coverblack_900: withOpacity("--color-coverblack-900"),
+       
+
         // Theme --------------------------------------------------
         // --------------------------------------------------------
 
@@ -130,6 +156,7 @@ module.exports = {
       SourceSansProBold : 'Source Sans Pro Bold',
     
     }
+    
   },
   plugins: [],
 }
