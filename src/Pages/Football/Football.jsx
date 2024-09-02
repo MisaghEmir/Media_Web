@@ -8,7 +8,7 @@ import RowNews from "../../Components/News/RowNews";
 function Football() {
   return (
     <div>
-      <Navigation />
+      <Navigation title={'Football'} image={'http://localhost:8080/image/football/football.png'} />
         {/* // MAIN ------------------------------------------
       //--------------------------------------------------- */}
         <div className="md:px-16 mt-20">

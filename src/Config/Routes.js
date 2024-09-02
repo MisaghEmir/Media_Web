@@ -10,13 +10,15 @@ const Login = lazy(() => import("../Pages/Login"));
 const Explore = lazy(() => import("../Pages/Explore/Explore"));
 const Search = lazy(() => import("../Pages/Explore/Search"));
 const Football = lazy(() => import("../Pages/Football/Football"));
+const League = lazy(() => import("../Pages/Football/League"));
+const Matches = lazy(() => import("../Pages/Football/Matches"));
 
-
+const HeaderRoute = <Header login={true} styk={false} />
 
 
 export const routerHeader = [
     {
-      element: <Header login={true} />,
+      element: HeaderRoute,
       path: "/",
     },
     {
@@ -24,15 +26,19 @@ export const routerHeader = [
       path: "/login",
     },
     {
-      element: <Header />,
+      element: HeaderRoute,
       path: "/football",
     },
     {
-      element: <Header />,
+      element: HeaderRoute,
+      path: "/football/laliga",
+    },
+    {
+      element: HeaderRoute,
       path: "/explore",
     },
     {
-      element: <Header />,
+      element: HeaderRoute,
       path: "/search",
     },
 ]
@@ -50,6 +56,14 @@ export const routerMain = [
     {
       element: <Football />,
       path: "/football",
+    },
+    {
+      element: <League />,
+      path: "/football/laliga",
+    },
+    {
+      element: <Matches />,
+      path: "/football/matches",
     },
     {
       element: <Explore />,
@@ -73,6 +87,14 @@ export const routerFooter = [
     {
       element: <Footer />,
       path: "/football",
+    },
+    {
+      element: <Footer />,
+      path: "/football/laliga",
+    },
+    {
+      element: <Footer />,
+      path: "/football/matches",
     },
     {
       element: <Footer />,

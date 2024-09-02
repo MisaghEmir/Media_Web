@@ -301,6 +301,7 @@
   display: none;
   opacity: 0;
   position: absolute;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .wrapper {
@@ -316,11 +317,11 @@
 }
 
 .anchor:hover + .anchorDiv{
-  display: flex;
+  display: block;
 }
 
 .anchorDiv:hover {
-  display: flex;
+  display: block;
 }
 
 .anchorDiv{
@@ -329,8 +330,28 @@
   display: none;
   top: anchor(100%);
   left: anchor(-100%);
-  width: 200px;
-  height: 400px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transition: 1s all;
+}
+.anchorOther {
+ anchor-name: --myanchorOther;
+}
+
+.anchorOther:hover + .anchorDivOther{
+  display: block;
+}
+
+.anchorDivOther:hover {
+  display: block;
+}
+
+.anchorDivOther{
+  position-anchor: --myanchorOther;
+  position: fixed;
+  display: none;
+  top: anchor(100%);
+  left: anchor(-100%);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   transition: 1s all;
 }
 

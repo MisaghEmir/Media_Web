@@ -38,13 +38,19 @@ function App() {
                   <HeaderMatch open={theme ? "openHeaderMatch" : "close"} />
                 }
               />
+              <Route
+                path={"/football/laliga"}
+                element={
+                  <HeaderMatch open={theme ? "openHeaderMatch" : "close"} />
+                }
+              />
             </Routes>
             <Routes>
               {routerHeader.map((route, index) => (
                 <Route path={route.path} element={route.element} key={index} />
               ))}
             </Routes>
-            <main className="pb-20 overflow-hidden">
+            <main className="pb-20 overflow-x-hidden">
               <Suspense fallback={<FuncyLoading />}>
                 <Routes>
                   {routerMain.map((route, index) => (

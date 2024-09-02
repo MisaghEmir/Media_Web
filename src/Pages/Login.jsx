@@ -4,9 +4,11 @@ import { FcGoogle } from "react-icons/fc";
 import Toggle from "../Components/Elements/Toggle";
 import { gsap } from "gsap";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 function Login() {
   const [emailCheck, setEmailCheck] = useState(false);
+  const dispatch = useDispatch()
 
   useEffect(() => {
     gsap.to(".email", 0.0, { opacity: 0 });
@@ -37,6 +39,9 @@ function Login() {
           setEmailCheck(false);
           gsap.to(".email", 0.4, { x: 0, opacity: 1 });
         }, 180);
+        dispatch({
+          type: 'login'
+        })
         break;
       default:
         break;
