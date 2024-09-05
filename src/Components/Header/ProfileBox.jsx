@@ -9,7 +9,7 @@ function ProfileBox() {
       <div className="flex-col px-12 py-5 flex items-center w-full justify-center  font-bold  font-SourceSansProBold border-b border-color_border_70">
         <div>
           <img
-            src="./image/tools/zoom-230.png"
+            src="/image/tools/zoom-230.png"
             className="w-[89px] h-[89px] border-4 rounded-full"
             alt=""
           />

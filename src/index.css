@@ -84,11 +84,7 @@
       format("woff");
 }
 
-body{
-  font-family: "Acumin Pro";
-  -webkit-font-smoothing: "Acumin Pro";
-  -moz-osx-font-smoothing: "Acumin Pro";
-}
+
 
 html {
   box-sizing: border-box;
@@ -202,6 +198,12 @@ a {
   --color-border-80: rgba(238, 238, 238, 0.8);
   --color-border-90: rgba(245, 245, 245, 0.9);
   --color-border-100: rgba(250, 250, 250, 1);
+}
+
+body{
+  font-family: "Acumin Pro";
+  -webkit-font-smoothing: "Acumin Pro";
+  -moz-osx-font-smoothing: "Acumin Pro";
 }
 
 div[data-theme="blue"] {

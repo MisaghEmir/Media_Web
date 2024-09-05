@@ -60,7 +60,7 @@ function NotifBox() {
                 <div className="flex gap-2 mt-2 p-4 bg-background_body rounded-xl w-full border border-color_border_60">
                   <div className="w-32 h-16">
                     <img
-                      src="./image/random/random4.webp"
+                      src="/image/random/random4.webp"
                       className="w-36 h-16 rounded-lg"
                       alt=""
                     />

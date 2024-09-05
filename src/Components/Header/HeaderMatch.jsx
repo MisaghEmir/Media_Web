@@ -71,10 +71,10 @@ function HeaderMatch({ open }) {
   ]);
 
   useEffect(() => {
-    gsap.to(".header", 0.0, { y: -60, opacity: 0 });
+    gsap.to(".headermatch", 0.0, { y: -60, opacity: 0 });
 
     setTimeout(() => {
-      gsap.to(".header", 0.4, { y: 0, opacity: 1 });
+      gsap.to(".headermatch", 0.4, { y: 0, opacity: 1 });
     }, 200);
   }, []);
   const swiper = useSwiper();
@@ -109,7 +109,7 @@ function HeaderMatch({ open }) {
   };
 
   return (
-    <header className="flex  border-blue-100 header  pr-20 bg-color_bg_29 z-40 relative">
+    <header className="flex  border-blue-100 headermatch  pr-20 bg-color_bg_28 z-40 relative">
       <div className="flex items-center px-4 py-2">
         <Example />
       </div>

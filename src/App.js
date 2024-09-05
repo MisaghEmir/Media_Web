@@ -21,7 +21,7 @@ function App() {
       <loginModeContext.Provider value={loginMode}>
         <Router>
           <div
-            className=" "
+            className="relative bg-background_body dark:bg-transparent"
             data-mode={theme ? "dark" : "light"}
             data-theme="blue"
           >
@@ -50,7 +50,7 @@ function App() {
                 <Route path={route.path} element={route.element} key={index} />
               ))}
             </Routes>
-            <main className="pb-20 overflow-x-hidden">
+            <main className="pb-20 overflow-x-hidden relative bg-background_body dark:bg-transparent">
               <Suspense fallback={<FuncyLoading />}>
                 <Routes>
                   {routerMain.map((route, index) => (

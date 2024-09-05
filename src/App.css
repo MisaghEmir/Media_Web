@@ -93,6 +93,17 @@
   }
 }
 
+body::-webkit-scrollbar {
+  background-color: #000000;
+  width: 5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(207, 207, 207);
+  border-radius: 100px;
+  height: 50%;
+}
+
 .close {
   mix-blend-mode: difference;
   color: aliceblue;
@@ -189,6 +200,22 @@
     width: 100vw;
     clip-path: circle(0% at 0 0);
   }
+}
+
+div.sticky {
+  position: sticky;
+  top: 0;
+  justify-content: flex-start;
+}
+
+.sahar{
+  position: fixed;
+  top: 0px;
+  z-index: 999;
+  width: 24.7%;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 .openHeaderMatch {
@@ -426,4 +453,30 @@
   87% {
     box-shadow: .2em -.2em 0 0 currentcolor;
   }
+}
+
+.opendiv {
+  display: none;
+}
+.click-opendiv {
+  cursor: pointer;
+}
+
+.click-opendiv:focus + .opendiv {
+  display: block;
+}
+.is-sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+  background-color: #ffffff !important;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+.header {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 1px 3px;
 }

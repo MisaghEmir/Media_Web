@@ -49,14 +49,14 @@ function Login() {
   };
   return (
     <div className=" relative flex  overflow-hidden font-AdobeCleanLight">
-      <div className="z-[-2] fixed w-full h-full overflow-hidden">
+      <div className="z-[0] fixed top-0 w-full h-full overflow-hidden">
         <img
           src="./image/random/random1.jpg"
           className="w-full h-full"
           alt=""
         />
       </div>
-      <div className="z-[-1] flex bg-background_body_dark opacity-60 fixed w-full h-full overflow-hidden"></div>
+      <div className="z-[0] flex bg-background_body_dark opacity-60 fixed w-full h-full overflow-hidden"></div>
       <div className="z-[0] flex justify-between fixed w-full h-full overflow-hidden">
         <div className="flex-1 flex items-center justify-center">
           <Link to="/">
