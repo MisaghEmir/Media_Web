@@ -4,6 +4,7 @@ import SmNews from "../Components/News/SmNews";
 import Label from "../Components/News/Label";
 import RowNews from "../Components/News/RowNews";
 import { gsap } from "gsap";
+import HomeLabel from "../Components/Elements/Label/HomeLabel";
 
 function Home() {
   useEffect(() => {
@@ -136,6 +137,9 @@ function Home() {
         </div>
         <div className="grid grid-cols-12"></div>
       </div>
+         {/* // LABEL ------------------------------------------
+      //--------------------------------------------------- */}
+      <HomeLabel />
     </div>
   );
 }

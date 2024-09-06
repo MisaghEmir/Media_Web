@@ -7,6 +7,7 @@ import TestCom from '../Pages/test'
 
 const Home = lazy(() => import("../Pages/Home"));
 const Login = lazy(() => import("../Pages/Login"));
+const Overview = lazy(() => import("../Pages/Overview"));
 const Explore = lazy(() => import("../Pages/Explore/Explore"));
 const Search = lazy(() => import("../Pages/Explore/Search"));
 const Football = lazy(() => import("../Pages/Football/Football"));
@@ -41,6 +42,7 @@ export const routerHeader = [
       element: HeaderRoute,
       path: "/search",
     },
+   
 ]
 
 
@@ -72,6 +74,10 @@ export const routerMain = [
     {
       element: <Search />,
       path: "/search",
+    },
+    {
+      element: <Overview />,
+      path: "/overview",
     },
 ]
 

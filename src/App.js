@@ -50,7 +50,7 @@ function App() {
                 <Route path={route.path} element={route.element} key={index} />
               ))}
             </Routes>
-            <main className="pb-20 overflow-x-hidden relative bg-background_body dark:bg-transparent">
+            <main className=" overflow-x-hidden relative bg-background_body dark:bg-transparent">
               <Suspense fallback={<FuncyLoading />}>
                 <Routes>
                   {routerMain.map((route, index) => (

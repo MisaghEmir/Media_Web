@@ -209,6 +209,7 @@ body{
 div[data-theme="blue"] {
   /* BACKGROUND------------- */
 
+  --theme-bg-00: rgb(7,102,218);
   --theme-bg-100: rgb(0,46,216);
   --theme-bg-200: rgb(0, 87, 255);
   --theme-bg-1200: rgb(32, 101, 209);

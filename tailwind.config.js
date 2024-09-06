@@ -131,6 +131,7 @@ module.exports = {
         // Theme --------------------------------------------------
         // --------------------------------------------------------
 
+        theme_00: withOpacity("--theme-bg-00"),
         theme_100: withOpacity("--theme-bg-100"),
         theme_200: withOpacity("--theme-bg-200"),
         theme_300: withOpacity("--theme-bg-300"),
