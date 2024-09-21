@@ -44,6 +44,12 @@ function App() {
                   <HeaderMatch open={theme ? "openHeaderMatch" : "close"} />
                 }
               />
+              <Route
+                path={"/football/match"}
+                element={
+                  <HeaderMatch open={theme ? "openHeaderMatch" : "close"} />
+                }
+              />
             </Routes>
             <Routes>
               {routerHeader.map((route, index) => (

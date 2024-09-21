@@ -1,7 +1,7 @@
 .open {
   mix-blend-mode: difference;
   color: aliceblue;
-  animation: open-div 0.4s forwards;
+  animation: open-div 0.5s forwards;
 }
 
 @keyframes open-div {
@@ -231,7 +231,7 @@ div.sticky {
 
 .openHeaderMatch {
   color: aliceblue;
-  animation: open-divHeaderMatch 0.332555s forwards;
+  animation: open-divHeaderMatch 0.419s forwards;
 }
 
 @keyframes open-divHeaderMatch {

@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Example from "../Elements/Example";
+import { NavLink } from "react-router-dom";
 
 function HeaderMatch({ open }) {
   const [slide, setSlide] = useState(0);
@@ -114,7 +115,7 @@ function HeaderMatch({ open }) {
         <Example />
       </div>
       <div className="flex items-center">
-      <button
+        <button
           className=" bg-theme_200 text-color_text_30 px-[3px] py-3 rounded-s-lg"
           onClick={() => setSlide(slide <= 9 ? 0 : slide - 9)}
         >
@@ -135,7 +136,7 @@ function HeaderMatch({ open }) {
               </p>
               <div className="left-0 absolute top-0 w-full h-full z-[0]">
                 <img
-                  src="./image/test/4.png"
+                  src="/image/test/4.png"
                   className="w-full h-full grayscale  opacity-15 dark:opacity-20 object-cover"
                   alt=""
                 />
@@ -145,32 +146,34 @@ function HeaderMatch({ open }) {
               <div
                 key={index}
                 id={`anchor${index + 1}`}
-                className="flex-col w-40 px-3 mx-[14px] py-1"
+                className="flex-col w-40 px-3 mx-[14px] py-1 cursor-pointer"
               >
-                <div className="flex-1 flex-col justify-between items-center">
-                  <section className="flex justify-between items-center">
-                    <div className="flex gap-2">
-                      <img
-                        src="http://localhost:8080/image/teams/Barcelona.png"
-                        className="w-5 h-5"
-                        alt=""
-                      />
-                      <small className="text-[12px]">{item.name}</small>
-                    </div>
-                    <span>-</span>
-                  </section>
-                  <section className="flex justify-between items-center">
-                    <div className="flex gap-2 items-center">
-                      <img
-                        src="http://localhost:8080/image/teams/Real Madrid.png"
-                        className="w-5 h-5"
-                        alt=""
-                      />
-                      <small className="text-[12px]">{item.name}</small>
-                    </div>
-                    <span>-</span>
-                  </section>
-                </div>
+                <NavLink to={"/football/match"}>
+                  <div className="flex-1 flex-col justify-between items-center">
+                    <section className="flex justify-between items-center">
+                      <div className="flex gap-2">
+                        <img
+                          src="http://localhost:8080/image/teams/Barcelona.png"
+                          className="w-5 h-5"
+                          alt=""
+                        />
+                        <small className="text-[12px]">{item.name}</small>
+                      </div>
+                      <span>-</span>
+                    </section>
+                    <section className="flex justify-between items-center">
+                      <div className="flex gap-2 items-center">
+                        <img
+                          src="http://localhost:8080/image/teams/Real Madrid.png"
+                          className="w-5 h-5"
+                          alt=""
+                        />
+                        <small className="text-[12px]">{item.name}</small>
+                      </div>
+                      <span>-</span>
+                    </section>
+                  </div>
+                </NavLink>
               </div>
             ))}
           </div>
