@@ -10,7 +10,7 @@ function Match({match}) {
         gsap.to(`.${match}`, 0.5, { bottom: '-100%' });
     }
   return (
-    <div className="w-full overflow-hidden hover:bg-color_bg_29 cursor-pointer px-5 transition-all delay-100 rounded-md"
+    <div className="w-full overflow-hidden hover:bg-color_bg_28 text-[94%] cursor-pointer px-5 transition-all delay-100 rounded-md"
     onMouseEnter={hoverHandle}
     onMouseLeave={leaveHandle}
     >
@@ -23,7 +23,7 @@ function Match({match}) {
               className="w-full h-full"
             />
           </div>
-          <div className="mt-4">Barcelona</div>
+          <div className="mt-4 text-center">Barcelona</div>
         </div>
         <div className="flex flex-col justify-between items-center py-6  px-8 relative">
           <p>Laliga</p>
@@ -41,7 +41,7 @@ function Match({match}) {
               className="w-full h-full"
             />
           </div>
-          <div className="mt-4">Real Madrid</div>
+          <div className="mt-4 text-center">Real Madrid</div>
         </div>
       </div>
     </div>

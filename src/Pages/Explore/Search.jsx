@@ -5,20 +5,25 @@ import SmNews from "../../Components/News/SmNews";
 import Label from "../../Components/News/Label";
 import RowNews from "../../Components/News/RowNews";
 import FilterBox from "../../Components/Elements/FilterBox";
+import Match from '../../Components/Match/Match'
 
 function Search() {
   const [filter, setFilter] = useState(false);
   return (
     <div>
       <div className="flex">
-        <div className={`${filter ? '' : 'overflow-hidden'} wrapper w-96 flex-1 border-r mr-3 border-color_border_70 `}>
-         <FilterBox closeHandle={() => setFilter(false)} />
+        <div
+          className={`${
+            filter ? "" : "overflow-hidden"
+          } wrapper w-96 flex-1 border-r mr-3 border-color_border_70 `}
+        >
+          <FilterBox closeHandle={() => setFilter(false)} />
         </div>
         <div>
           <SearchHeader filterHandle={() => setFilter(true)} filter={filter} />
           {/* // MAIN ------------------------------------------
       //--------------------------------------------------- */}
-          <div className="flex">
+          <div className="md:px-16 mt-20 flex">
             <div className=" mt-20">
               <div className="grid grid-cols-12">
                 <div className="col-span-12 md:col-span-8 ">
@@ -51,6 +56,9 @@ function Search() {
                     <div className="mt-20">
                       <RowNews />
                       <RowNews />
+                    </div>
+                    <div className="mt-20">
+                      <Match match={"id1"} />
                     </div>
                   </div>
                 </div>

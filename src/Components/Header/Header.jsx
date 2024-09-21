@@ -65,7 +65,7 @@ function Header({styk}) {
                     style={{ lineHeight: "18px" }}
                     to="/search"
                   >
-                    Search & Explore
+                    Tenis
                   </NavLink>
                 </li>
                 <li className="py-[6px]">
@@ -74,7 +74,7 @@ function Header({styk}) {
                     style={{ lineHeight: "18px" }}
                     to="/explore"
                   >
-                    Curents Galleries
+                    Judo
                   </NavLink>
                 </li>
                 <li>

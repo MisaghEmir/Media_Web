@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Footer() {
   return (
@@ -6,7 +7,7 @@ function Footer() {
       <div className="border-color_border_80 border-t dark:border-color_border_40 w-full h-full flex items-center">
         <div className="flex">
           <div className="flex justify-center px-7 border-l border-color_border_60">
-            More Victory City
+            <NavLink to={"/overview"}>More Victory City</NavLink>
           </div>
           <div className="flex justify-center px-7 border-l border-color_border_60">
             English
@@ -24,7 +25,15 @@ function Footer() {
           <div>Community</div>
           <div>Help</div>
           <div>Cookie preferences</div>
-          <div>Do not sell or share my personal information</div>
+        </div>
+        <div className="flex justify-end gap-5 flex-1 pr-2">
+          <div>
+            <img
+              src="/image/logo/logo.png"
+              className="w-9 h-9 bg-transparent"
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </div>
